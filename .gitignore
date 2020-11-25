@@ -1,0 +1,107 @@
+# De https://github.com/github/gitignore/blob/master/Gradle.gitignore
+.gradle
+/ construire /
+
+# Ignorer la configuration de l'interface graphique Gradle
+gradle-app.setting
+
+# Évitez d'ignorer le fichier jar du wrapper Gradle (les fichiers .jar sont généralement ignorés)
+! gradle-wrapper.jar
+
+# Cache de projet
+.gradletasknamecache
+
+# # Travaillez autour de https://youtrack.jetbrains.com/issue/IDEA-116898
+# gradle / wrapper / gradle-wrapper.properties
+
+
+
+# De https://github.com/github/gitignore/blob/master/Java.gitignore
+* .classe
+
+# Outils mobiles pour Java (J2ME)
+.mtj.tmp /
+
+# Fichiers de package #
+* .jar
+* .war
+* .ear
+
+# journaux de plantage de la machine virtuelle, voir http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid *
+
+
+# De https://github.com/github/gitignore/blob/master/Global/JetBrains.gitignore
+# Couvre les IDE JetBrains: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio et Webstorm
+# Référence: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
+
+# Trucs spécifiques à l'utilisateur:
+.idea / workspace.xml
+.idea / tasks.xml
+.idea / dictionnaires
+.idea / vcs.xml
+.idea / jsLibraryMappings.xml
+
+# Fichiers sensibles ou à taux de désabonnement élevé:
+.idea / dataSources.ids
+.idea / dataSources.xml
+.idea / dataSources.local.xml
+.idea / sqlDataSources.xml
+.idea / dynamic.xml
+.idea / uiDesigner.xml
+
+# Gradle:
+.idea / gradle.xml
+.idea / bibliothèques
+
+# Plugin Mongo Explorer:
+.idea / mongoSettings.xml
+
+# # Format de projet basé sur un fichier:
+* .iws
+
+# # Fichiers spécifiques au plugin:
+
+# IntelliJ
+/ out /
+
+Plugin # mpeltonen / sbt-idea
+.idea_modules /
+
+# Plugin JIRA
+atlassian-ide-plugin.xml
+
+# Plugin Crashlytics (pour Android Studio et IntelliJ)
+com_crashlytics_export_strings.xml
+crashlytics.properties
+crashlytics-build.properties
+fabric.properties
+
+
+* .DS_Store
+.AppleDouble
+.LSOverride
+
+# L' icône doit se terminer par deux \ r
+Icône
+
+
+# Miniatures
+._ *
+
+# Fichiers pouvant apparaître à la racine d'un volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.non.présenté
+
+# Répertoires potentiellement créés sur un partage AFP distant
+.AppleDB
+.AppleDesktop
+ Dossier de la corbeille du  réseau
+ Articles temporaires
+.apdis
+k
