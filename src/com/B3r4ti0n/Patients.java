@@ -7,8 +7,7 @@ import java.util.Scanner;
 public class Patients {
     private static List<String>  listePatients = new ArrayList<>();
 
-    public static void patients() {
-
+    public static List<String> patients() {
 
         Scanner scanner = new Scanner( System.in );
         int saisieChoix;
@@ -21,7 +20,11 @@ public class Patients {
         ajouterPatients("Ninho");
 
         do{
-            System.out.println("1 pour ajouter un patient, 2 pour supprimer un patient, 3 pour modifier patient, 4 pour afficher la liste des patients, 5 retour ");
+            System.out.println("1 pour ajouter un patient");
+            System.out.println("2 pour supprimer un patient");
+            System.out.println("3 pour modifier patient");
+            System.out.println("4 pour afficher la liste des patients");
+            System.out.println("5 retour ");
             saisieChoix = scanner.nextInt();
 
 
@@ -74,8 +77,9 @@ public class Patients {
             else if (saisieChoix == 5) {
                 System.out.println("retour");
             }
-        }while (saisieChoix ==5);
+        }while (saisieChoix !=5);
 
+        return listePatients;
     }
     public static void afficherPatients(){
         for (String  maVille:listePatients) {
