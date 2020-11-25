@@ -28,7 +28,7 @@ public class Menu {
         } else if (ChoixMenu.equals("2")) {
             Patients.patients();
         } else if (ChoixMenu.equals("3")) {
-            Divertisement.Jeu();
+            Divertisement.menuJeu();
         } else if (ChoixMenu.equals("4")) {
             Divertisement.musique();
         }
