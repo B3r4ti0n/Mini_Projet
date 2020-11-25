@@ -1,11 +1,15 @@
 package com.B3r4ti0n;
 
+import com.B3r4ti0n.Jeu.Chemin;
+
 import java.util.Scanner;
 
 public class ColossalCave {
 
     public static void regle() {
-        System.out.println("regles blablablabla");
+        System.out.println("Bienvenu sur Colossal Cave\n"+ "\n"+
+                "Ce jeu d’aventure est purement textuel. Son fonctionnement est simple :\n"+
+                "Un paragraphe décrit le lieu où l'on se trouve, et l'on tape des instructions au clavier pour se déplacer ou résoudre des énigmes diverses.\n");
 
         String ChoixMenu;
         System.out.println("Pour Jouer tapez '1'");
@@ -27,6 +31,16 @@ public class ColossalCave {
         int Vallee = 4;
         int Foret = 5;
         Scanner scanner = new Scanner(System.in);
+
+        Chemin buildingRoute = new Chemin(0, 0, 0, Route);
+        Chemin foretRoute = new Chemin(0, Route, 0, 0);
+        Chemin collineForet = new Chemin(Foret, 0, Foret, 0);
+        Chemin valleeRoute = new Chemin(Route, 0, 0, 0);
+        Chemin valleeColline = new Chemin(Colline, 0, 0, Colline);
+        Chemin routeColline = new Chemin(0, 0, 0, Colline);
+        Chemin routeVallee = new Chemin(0, Vallee, 0, 0);
+        Chemin routeBuilding = new Chemin(0, 0, Building, 0);
+        Chemin routeForet = new Chemin(Foret, 0, 0, 0);
 
         // 0 DEPART  //  N, S, E, W
         // 1 ROUTE -> 2, 3, 4, 5 / W, E, S, N
