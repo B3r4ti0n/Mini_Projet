@@ -14,7 +14,7 @@ public class Menu {
         Scanner menu = new Scanner(System.in);
         ChoixMenu = menu.next();
 
-        while (!(ChoixMenu.equals("1") || ChoixMenu.equals("2"))) {
+        while (!(ChoixMenu.equals("1") || ChoixMenu.equals("2") || ChoixMenu.equals("3") || ChoixMenu.equals("4"))) {
             System.out.println("-----menu-----" + "\n");
             System.out.println("1- Pour consulter ou prendre un RDV tapez '1'");
             System.out.println("2- Pour reserver une chambre tapez '2'");
@@ -26,7 +26,7 @@ public class Menu {
         if (ChoixMenu.equals("1")) {
             Gestion_administrative.gestion_rdv();
         } else if (ChoixMenu.equals("2")) {
-            Gestion_administrative.gestion_reservation_chambre();
+            Patients.patients();
         } else if (ChoixMenu.equals("3")) {
             Divertisement.Jeu();
         } else if (ChoixMenu.equals("4")) {
