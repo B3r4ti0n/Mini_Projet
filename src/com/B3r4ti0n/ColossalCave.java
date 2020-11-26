@@ -20,7 +20,6 @@ public class ColossalCave {
             System.out.println("Pour Jouer tapez '1'");
             ChoixMenu = menu.next();
         }
-
         if (ChoixMenu.equals("1")) { ColossalCave.jeu(); }
     }
 
