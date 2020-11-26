@@ -16,18 +16,20 @@ public class GestionAdministrative {
         Scanner scanner = new Scanner(System.in);
         System.out.println("1 RDV");
         System.out.println("2 Chambres");
-        System.out.println("3 Menu");
+        System.out.println("3 Patients");
+        System.out.println("4 Menu");
         int saisieChoix = scanner.nextInt();
         if (saisieChoix == 1) {
             gestionRdv();
         } else if (saisieChoix == 2) {
             gestionChambre();
         } else if (saisieChoix == 3) {
+            Patients.patients();
+        } else if (saisieChoix == 4) {
             Menu.run();
         } else {
             System.out.println("invalide");
         }
-
     }
 
     public static void gestionRdv() {

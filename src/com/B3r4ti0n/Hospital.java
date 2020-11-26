@@ -11,7 +11,6 @@ public class Hospital {
         this.speciality = speciality;
     }
 
-
     public String getName() {
         return name;
     }

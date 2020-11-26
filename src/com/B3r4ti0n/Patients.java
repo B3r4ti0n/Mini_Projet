@@ -7,17 +7,11 @@ import java.util.Scanner;
 public class Patients {
     private static List<String>  listePatients = new ArrayList<>();
 
-    public static List<String> patients() {
+    public static void patients() {
 
         Scanner scanner = new Scanner( System.in );
         int saisieChoix;
         String saisiePatient;
-
-        //Ajout delements dans la liste
-        ajouterPatients("Michelle Dupres");
-        ajouterPatients("José Lepauvre");
-        ajouterPatients("Sangoku");
-        ajouterPatients("Ninho");
 
         do{
             System.out.println("1 pour ajouter un patient");
@@ -26,7 +20,6 @@ public class Patients {
             System.out.println("4 pour afficher la liste des patients");
             System.out.println("5 retour ");
             saisieChoix = scanner.nextInt();
-
 
             if (saisieChoix == 1) {
                 do {
@@ -76,23 +69,23 @@ public class Patients {
 
             else if (saisieChoix == 5) {
                 System.out.println("retour");
+                GestionAdministrative.gestion();
             }
         }while (saisieChoix !=5);
 
-        return listePatients;
     }
     public static void afficherPatients(){
-        for (String  maVille:listePatients) {
-            System.out.println(maVille);
+        for (String  monPatient:listePatients) {
+            System.out.println(monPatient);
         }
     }
 
-    public static void ajouterPatients(String patients){
-        listePatients.add(patients);
+    public static void ajouterPatients(String patient){
+        listePatients.add(patient);
     }
 
-    public static void modifierPatients(int index, String ville){
-        listePatients.set(index, ville);
+    public static void modifierPatients(int index, String patient){
+        listePatients.set(index, patient);
     }
 
     public static int getListeSize(){
@@ -103,5 +96,3 @@ public class Patients {
         listePatients.remove(index);
     }
 }
-
-
