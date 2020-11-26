@@ -54,7 +54,8 @@ public class ColossalCave {
                 "1/ Route" +"\n"+ "2/ Colline" +"\n"+ "3/ Building en brique" +"\n"+ "4/ Vallée " +"\n"+ "5/ Forêt");
         int depart = scanner.nextInt();
         if (depart == Route){
-            com.B3r4ti0n.Jeu.Route.run();
+            //com.B3r4ti0n.Jeu.Route.run();
+            mouvement(depart);
         } else if (depart == Colline) {
             com.B3r4ti0n.Jeu.Colline.run();
         } else if (depart == Building) {
@@ -63,8 +64,25 @@ public class ColossalCave {
             com.B3r4ti0n.Jeu.Vallee.run();
         } else if (depart == Foret) {
             com.B3r4ti0n.Jeu.Foret.run();
-        } else if (depart == Route) {
-            com.B3r4ti0n.Jeu.Route.run();
         }
+    }
+    public static int mouvement(int depart){
+        if(depart == 1){
+            System.out.println("rentre de chemin");
+           String event = Function.scan();
+            switch(event){
+                case "2":
+                    System.out.println(" Vous êtes au bout de la route devant un petit immeuble en brique.\n"+
+                            "Un petit ruisseau coule a côté du building en bas d’une rigole.");
+                    break;
+                case "3":
+                    System.out.println("");
+                    break;
+                default:
+                    throw new IllegalStateException("Unexpected value: " + event);
+            }
+            return 1;
+        }
+        return 0;
     }
 }
