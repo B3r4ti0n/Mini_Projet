@@ -8,11 +8,12 @@ public class Menu {
         boolean reboot = false;
         while (reboot == false){
             String ChoixMenu;
-            System.out.println("-----menu-----" + "\n");
-            System.out.println("1- Pour consulter/modifier la liste des patients ou prendre un RDV tapez '1'");
-            System.out.println("2- Pour reserver une chambre tapez '2'");
-            System.out.println("3- Pour lancer le jeu tapez '3'");
-            System.out.println("4- Pour lancer de la musique tapez '4'");
+            System.out.println("-----MENU PRINCIPAL-----" + "\n");
+            System.out.println("1- Gestion administrative taper '1' ");
+            System.out.println("2- Pour lancer le jeu tapez '2' ");
+            System.out.println("3- Pour lancer de la musique tapez '3' ");
+            System.out.println("4- pour lancer l'annuaire tapez '4' ");
+            System.out.println("q- pour quitter l'application taper 'q' ");
             Scanner menu = new Scanner(System.in);
             ChoixMenu = menu.next();
 
@@ -20,14 +21,15 @@ public class Menu {
                 case "1":
                     GestionAdministrative.gestion();
                     break;
-                case "3":
+                case "2":
                     Divertisement.menuJeu();
                     break;
-                case "4":
+                case "3":
                     Divertisement.musique();
                     break;
-                case "5":
+                case "4":
                     Base.annuaire();
+                    break;
                 case "q":
                     reboot = true;
                     break;

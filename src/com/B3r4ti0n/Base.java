@@ -6,11 +6,6 @@ import java.util.ListIterator;
 
 public class Base implements Gestion{
 
-    //public String [] rdv = new String[100];
-
-    public static void gestion_rdv() {
-
-    }
     public static void annuaire(){
         Scanner scanner = new Scanner(System.in);
         boolean reboot2 = false;
@@ -19,7 +14,7 @@ public class Base implements Gestion{
             System.out.println("Bienvenue dans le menu de l'annuaire d'Hopitaux.");
             System.out.println("Taper 1 pour rajouter un entré dans l'annuaire.");
             System.out.println("Taper 2 pour rechercher dans l'annuaire.");
-            System.out.println("Taper 3 pour retourner au menu principal.");
+            System.out.println("Taper q pour retourner au menu principal.");
             String user = scanner.next();
             switch (user) {
                 case "1":

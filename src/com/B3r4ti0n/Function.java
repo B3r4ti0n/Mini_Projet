@@ -32,7 +32,7 @@ public class Function {
             switch (user){
                 case "yes":
                     System.out.println("Fichier bien selectioner ");
-                    break;
+                    return true;
                 case "non":
                     System.out.println("Retour à l'étape précédente");
                     return false;
@@ -42,11 +42,17 @@ public class Function {
     }
    public static void writerFile(String scanU){
         String user = scanU + "/listing.txt";
-       System.out.println(user);
        try {
            FileWriter writer = new FileWriter(user);
            BufferedWriter bw = new BufferedWriter(writer);
-           bw.write(user);
+           System.out.println("Rentre le nom de l'hôpital.");
+           String name = scan();
+           System.out.println("Rentre le adresse de l'hôpital.");
+           String adress = scan();
+           System.out.println("rentre la spécialité de l'hôpital");
+           String speciality = scan();
+
+           bw.write(name + "#" + adress + "#" + speciality);
            bw.close();
        } catch (IOException e) {
            e.printStackTrace();
