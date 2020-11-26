@@ -22,15 +22,19 @@ public class Menu {
             System.out.println("4- Pour lancer de la musique tapez '4'");
             ChoixMenu = menu.next();
         }
-
-        if (ChoixMenu.equals("1")) {
-            Gestion_administrative.gestion_rdv();
-        } else if (ChoixMenu.equals("2")) {
-            Patients.patients();
-        } else if (ChoixMenu.equals("3")) {
-            Divertisement.menuJeu();
-        } else if (ChoixMenu.equals("4")) {
-            Divertisement.musique();
+        switch (ChoixMenu){
+            case "1":
+                Gestion_administrative.gestion_rdv();
+                break;
+            case "2":
+                Patients.patients();
+                break;
+            case "3":
+                Divertisement.menuJeu();
+                break;
+            case "4":
+                Divertisement.musique();
+                break;
         }
     }
 }
