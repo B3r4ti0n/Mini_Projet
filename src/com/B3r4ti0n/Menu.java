@@ -26,7 +26,7 @@ public class Menu {
             }
             switch (ChoixMenu){
                 case "1":
-                    Gestion_administrative.gestion_rdv();
+                    Base.gestion_rdv();
                     break;
                 case "2":
                     Patients.patients();
@@ -38,7 +38,7 @@ public class Menu {
                     Divertisement.musique();
                     break;
                 case "5":
-                    Gestion_administrative.annuaire();
+                    Base.annuaire();
                 case "q":
                     reboot = true;
                     break;

@@ -5,11 +5,11 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Scanner;
 
-public class gestionAdministrative {
+public class GestionAdministrative {
     private static List<String> listeRDV = new ArrayList();
     private static List<String> listeChambre = new ArrayList();
 
-    public gestionAdministrative() {
+    public GestionAdministrative() {
     }
 
     public static void gestion() {

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.ListIterator;
 
-public class Gestion_administrative implements Gestion{
+public class Base implements Gestion{
 
     //public String [] rdv = new String[100];
 
