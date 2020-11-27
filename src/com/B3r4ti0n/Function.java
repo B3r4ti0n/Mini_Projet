@@ -57,6 +57,7 @@ public class Function {
                     return false;
             }
         }
+        return false;
     }
    public static void writerFile(String scanU){
         String user = scanU + "/listing.txt";

@@ -25,10 +25,10 @@ public class Menu {
                     Divertisement.menuJeu();
                     break;
                 case "3":
-                    Function.playSound();
+                    //Function.playSound();
                     break;
                 case "4":
-                    Base.annuaire();
+                   //Base.annuaire();
                     break;
                 case "q":
                     reboot = true;
