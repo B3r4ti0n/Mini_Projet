@@ -29,15 +29,41 @@ public class ColossalCave {
         int Building = 3;
         int Vallee = 4;
         int Foret = 5;
-        Scanner scanner = new Scanner(System.in);
+        boolean reboot = false;
+        while ( reboot == false ){
+            Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Bienvenu sur Colossal Cave" +"\n"+
-                "Veuillez choisir votre point de départ :" +"\n"+
-                "1/ Route" +"\n"+ "2/ Colline" +"\n"+ "3/ Building en brique" +"\n"+ "4/ Vallée " +"\n"+ "5/ Forêt");
-        int depart = scanner.nextInt();
-        if (depart == Route || depart == Colline || depart == Building || depart == Vallee || depart == Foret) {
-            mouvement(depart);
+            System.out.println("Bienvenu sur Colossal Cave" +"\n"+
+                    "Veuillez choisir votre point de départ :" +"\n"+
+                    "1/ Route" +"\n"+ "2/ Colline" +"\n"+ "3/ Building en brique" +"\n"+ "4/ Vallée " +"\n"+ "5/ Forêt " + "\n" + "q/ Retour menu");
+
+                String depart = scanner.next();
+                switch (depart){
+                    case "1":
+                        mouvement(1);
+                        break;
+                    case "2":
+                        mouvement(2);
+                        break;
+                    case "3":
+                        mouvement(3);
+                        break;
+                    case "4":
+                        mouvement(4);
+                        break;
+                    case "5":
+                        mouvement(5);
+                        break;
+                    case "q":
+                        reboot = true;
+                        break;
+            }
+
+           /* if (depart == Route || depart == Colline || depart == Building || depart == Vallee || depart == Foret) {
+                mouvement(depart);
+            }*/
         }
+
     }
 
     public static int mouvement(int depart){

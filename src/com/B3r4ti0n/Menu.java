@@ -25,7 +25,7 @@ public class Menu {
                     Divertisement.menuJeu();
                     break;
                 case "3":
-                    Divertisement.musique();
+                    Function.playSound();
                     break;
                 case "4":
                     Base.annuaire();
