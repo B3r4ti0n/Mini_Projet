@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class ColossalCave {
 
-    public static void regle() {
+    public static void regle() {    //regle jeu colossal
         System.out.println("Bienvenu sur Colossal Cave\n"+ "\n"+
                 "Ce jeu d’aventure est purement textuel. Son fonctionnement est simple :\n"+
                 "Un paragraphe décrit le lieu où l'on se trouve, et l'on tape des instructions au clavier pour se déplacer ou résoudre des énigmes diverses.\n"+

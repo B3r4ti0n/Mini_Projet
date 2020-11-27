@@ -9,26 +9,41 @@ public class GestionAdministrative {
     private static List<String> listeRDV = new ArrayList();
     private static List<String> listeChambre = new ArrayList();
 
+    //Menu de selection des options de gestion
     public static void gestion() {
         Scanner scanner = new Scanner(System.in);
+
         System.out.println("1 RDV");
         System.out.println("2 Chambres");
         System.out.println("3 Patients");
-        System.out.println("4 Menu");
+        System.out.println("4 Praticien");
+        System.out.println("5 Menu");
+
         int saisieChoix = scanner.nextInt();
-        if (saisieChoix == 1) {
-            gestionRdv();
-        } else if (saisieChoix == 2) {
-            gestionChambre();
-        } else if (saisieChoix == 3) {
-            Patients.patients();
-        } else if (saisieChoix == 4) {
-            Menu.run();
-        } else {
-            System.out.println("invalide");
+
+        switch (saisieChoix) {
+            case 1:
+                gestionRdv();
+                break;
+            case 2:
+                gestionChambre();
+                break;
+            case 3:
+                Patients.patients();
+                break;
+            case 4:
+                Praticien.menuPraticien();
+                break;
+            case 5:
+                Menu.run();
+                break;
+            default:
+                System.out.println("invalid");
+                break;
         }
     }
 
+    //menu de gestion des rdv
     public static void gestionRdv() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("1 pour ajouter un RDV");
@@ -62,7 +77,7 @@ public class GestionAdministrative {
         }
 
     }
-
+    //menu de gestion des chambres
     public static void gestionChambre() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("1 pour ajouter une chambre");
@@ -97,6 +112,7 @@ public class GestionAdministrative {
 
     }
 
+    //permet d'afficher les rdv enregistrer
     public static void afficherRDV() {
         Iterator var0 = listeRDV.iterator();
 
@@ -105,15 +121,16 @@ public class GestionAdministrative {
             System.out.println(monRDV);
         }
 
-        gestion();
+        gestionRdv();
     }
 
+    //permet d'ajouter un rdv
     public static void ajouterRDV() {
         Scanner scanner = new Scanner(System.in);
 
         int saisieChoix;
         do {
-            System.out.println("indiquez l'heure du rdv puis le prénm et le nom du patient :");
+            System.out.println("indiquez l'heure du rdv puis la date jj/mm/aa puis le prénom et le nom du patient :");
             String saisieInfo = scanner.next();
             listeRDV.add(saisieInfo);
             System.out.println("RDV enregistrer  !");
@@ -121,18 +138,19 @@ public class GestionAdministrative {
             saisieChoix = scanner.nextInt();
         } while(saisieChoix == 1);
 
-        gestion();
+        gestionRdv();
     }
 
+    //permet de modifier un rdv
     public static void modifierRDV() {
         Scanner scanner = new Scanner(System.in);
 
         int saisieChoix;
         do {
-            afficherRDV();
+
             System.out.println("quel RDV souhaitez vous modifier ? Indiquez sont numéro");
             int indexRDV = scanner.nextInt();
-            System.out.println("saisisez le prénom puis le nom du nouveau RDV :");
+            System.out.println("indiquez l'heure du rdv puis la date jj/mm/aa puis le prénom et le nom du nouveau RDV :");
             String saisieInfo = scanner.next();
             listeRDV.set(indexRDV, saisieInfo);
             System.out.println("le RDV à bien été modifier !");
@@ -140,15 +158,16 @@ public class GestionAdministrative {
             saisieChoix = scanner.nextInt();
         } while(saisieChoix == 1);
 
-        gestion();
+        gestionRdv();
     }
 
+    //permet de supprimer un rdv
     public static void supprimerRDV() {
         Scanner scanner = new Scanner(System.in);
 
         int saisieChoix;
         do {
-            afficherRDV();
+
             System.out.println("quel RDV souhaitez vous supprimer ? Indiquez sont prénom nom");
             String saisieInfo = scanner.next();
             int indexRDV = listeRDV.indexOf(saisieInfo);
@@ -158,9 +177,10 @@ public class GestionAdministrative {
             saisieChoix = scanner.nextInt();
         } while(saisieChoix == 1);
 
-        gestion();
+        gestionRdv();
     }
 
+    //permet d'afficher les chambres
     public static void afficherChambre() {
         Iterator var0 = listeChambre.iterator();
 
@@ -169,9 +189,10 @@ public class GestionAdministrative {
             System.out.println(maChambre);
         }
 
-        gestion();
+        gestionChambre();
     }
 
+    //permet d'ajouoter des chambres
     public static void ajouterChambre() {
         Scanner scanner = new Scanner(System.in);
 
@@ -185,15 +206,15 @@ public class GestionAdministrative {
             saisieChoix = scanner.nextInt();
         } while(saisieChoix == 1);
 
-        gestion();
+        gestionChambre();
     }
 
+    //permet de modifier des chambres
     public static void modifierChambre() {
         Scanner scanner = new Scanner(System.in);
 
         int saisieChoix;
         do {
-            afficherRDV();
             System.out.println("quel chambre souhaitez vous modifier ? Indiquez sont numéro");
             int indexRDV = scanner.nextInt();
             System.out.println("saisisez le le numéro de la chambre puis le prénom et le nom :");
@@ -204,15 +225,16 @@ public class GestionAdministrative {
             saisieChoix = scanner.nextInt();
         } while(saisieChoix == 1);
 
-        gestion();
+        gestionChambre();
     }
 
+    //permet de supprimer des chambres
     public static void supprimerChambre() {
         Scanner scanner = new Scanner(System.in);
 
         int saisieChoix;
         do {
-            afficherRDV();
+
             System.out.println("quelle chambre souhaitez vous supprimer ? Indiquez sont prénom nom");
             String saisieInfo = scanner.next();
             int indexRDV = listeChambre.indexOf(saisieInfo);
@@ -221,7 +243,6 @@ public class GestionAdministrative {
             System.out.println("souhaitez vous suprimer une autre chambre ? 1 pour oui 2 pour non ");
             saisieChoix = scanner.nextInt();
         } while(saisieChoix == 1);
-
-        gestion();
+        gestionChambre();
     }
 }
