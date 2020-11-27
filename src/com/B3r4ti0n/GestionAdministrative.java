@@ -16,7 +16,8 @@ public class GestionAdministrative {
         System.out.println("1 RDV");
         System.out.println("2 Chambres");
         System.out.println("3 Patients");
-        System.out.println("4 Menu");
+        System.out.println("4 Praticien");
+        System.out.println("5 Menu");
 
         int saisieChoix = scanner.nextInt();
 
@@ -31,6 +32,9 @@ public class GestionAdministrative {
                 Patients.patients();
                 break;
             case 4:
+                Praticien.menuPraticien();
+                break;
+            case 5:
                 Menu.run();
                 break;
             default:
@@ -117,7 +121,7 @@ public class GestionAdministrative {
             System.out.println(monRDV);
         }
 
-        gestion();
+        gestionRdv();
     }
 
     //permet d'ajouter un rdv
@@ -134,7 +138,7 @@ public class GestionAdministrative {
             saisieChoix = scanner.nextInt();
         } while(saisieChoix == 1);
 
-        gestion();
+        gestionRdv();
     }
 
     //permet de modifier un rdv
@@ -143,7 +147,7 @@ public class GestionAdministrative {
 
         int saisieChoix;
         do {
-            afficherRDV();
+
             System.out.println("quel RDV souhaitez vous modifier ? Indiquez sont numéro");
             int indexRDV = scanner.nextInt();
             System.out.println("indiquez l'heure du rdv puis la date jj/mm/aa puis le prénom et le nom du nouveau RDV :");
@@ -154,7 +158,7 @@ public class GestionAdministrative {
             saisieChoix = scanner.nextInt();
         } while(saisieChoix == 1);
 
-        gestion();
+        gestionRdv();
     }
 
     //permet de supprimer un rdv
@@ -163,7 +167,7 @@ public class GestionAdministrative {
 
         int saisieChoix;
         do {
-            afficherRDV();
+
             System.out.println("quel RDV souhaitez vous supprimer ? Indiquez sont prénom nom");
             String saisieInfo = scanner.next();
             int indexRDV = listeRDV.indexOf(saisieInfo);
@@ -173,7 +177,7 @@ public class GestionAdministrative {
             saisieChoix = scanner.nextInt();
         } while(saisieChoix == 1);
 
-        gestion();
+        gestionRdv();
     }
 
     //permet d'afficher les chambres
@@ -185,7 +189,7 @@ public class GestionAdministrative {
             System.out.println(maChambre);
         }
 
-        gestion();
+        gestionChambre();
     }
 
     //permet d'ajouoter des chambres
@@ -202,7 +206,7 @@ public class GestionAdministrative {
             saisieChoix = scanner.nextInt();
         } while(saisieChoix == 1);
 
-        gestion();
+        gestionChambre();
     }
 
     //permet de modifier des chambres
@@ -211,7 +215,6 @@ public class GestionAdministrative {
 
         int saisieChoix;
         do {
-            afficherRDV();
             System.out.println("quel chambre souhaitez vous modifier ? Indiquez sont numéro");
             int indexRDV = scanner.nextInt();
             System.out.println("saisisez le le numéro de la chambre puis le prénom et le nom :");
@@ -222,7 +225,7 @@ public class GestionAdministrative {
             saisieChoix = scanner.nextInt();
         } while(saisieChoix == 1);
 
-        gestion();
+        gestionChambre();
     }
 
     //permet de supprimer des chambres
@@ -231,7 +234,7 @@ public class GestionAdministrative {
 
         int saisieChoix;
         do {
-            afficherRDV();
+
             System.out.println("quelle chambre souhaitez vous supprimer ? Indiquez sont prénom nom");
             String saisieInfo = scanner.next();
             int indexRDV = listeChambre.indexOf(saisieInfo);
@@ -240,6 +243,6 @@ public class GestionAdministrative {
             System.out.println("souhaitez vous suprimer une autre chambre ? 1 pour oui 2 pour non ");
             saisieChoix = scanner.nextInt();
         } while(saisieChoix == 1);
-        gestion();
+        gestionChambre();
     }
 }
